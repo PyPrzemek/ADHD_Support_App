@@ -6,3 +6,5 @@ opencv-python
 PyAudio
 tensorflow
 librosa
+huggingface_hub
+tensorflow
