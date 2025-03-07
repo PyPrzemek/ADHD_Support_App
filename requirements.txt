@@ -2,7 +2,7 @@ PyQt6
 numpy
 pandas
 matplotlib
-# ewentualnie do wykrywania emocji z wideo:
-# opencv-python
-# dlib
-# mediapipe
+opencv-python
+PyAudio
+tensorflow
+librosa
