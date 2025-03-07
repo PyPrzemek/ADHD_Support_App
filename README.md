@@ -1,20 +1,26 @@
-# ADHD Support App (PyQt6) – Minimalne MVP
+# ADHD Support App (Advanced)
 
-Prosta aplikacja stworzona w Pythonie (PyQt6), pomagająca w zarządzaniu zadaniami i śledzeniu nastroju.  
-Wersja **bez przekombinowania** – zawiera tylko kluczowe funkcje:
-
-- Dodawanie / edycja / usuwanie zadań (z priorytetem i statusem)  
-- Śledzenie nastroju (data, rodzaj nastroju, notatki)  
-- Prosty widok kalendarza (podgląd zadań i nastrojów w wybranym dniu)  
-- Baza danych SQLite (dwie tabele: `tasks` i `moods`)
-
-## Wymagania
-- Python 3.9+  
-- Zainstalowane pakiety z `requirements.txt` (obecnie tylko `PyQt6`).
+Ta wersja zawiera:
+- **Inteligentny Pomodoro** z rekomendacją długości sesji (klasa `PomodoroAI`),
+- **Rozszerzony Mood Tracker** z poziomem energii, skupienia i placeholderem do analizy emocji (audio/wideo),
+- **Baza danych** poszerzona o tabelę `pomodoro_sessions`, pola `focus_score` w `tasks` i `energy_level/focus_level` w `moods`,
+- **Dock** w interfejsie do Pomodoro.
 
 ## Instalacja
-1. Sklonuj to repozytorium lub pobierz paczkę ZIP.
-2. Wejdź do katalogu `ADHD_Support_App/`.
-3. Zainstaluj wymagane paczki:
-   ```bash
-   pip install -r requirements.txt
+1. Sklonuj repozytorium
+2. `pip install -r requirements.txt`
+3. `python main.py`
+
+## Użycie
+1. Zakładka *Zadania* – standardowe zarządzanie. 
+2. Zakładka *Nastrój* – rejestrowanie stanu emocjonalnego + energii/fokusu.
+3. *Kalendarz* – przegląd zadań i nastrojów na wybrany dzień.
+4. *Pomodoro (Dock)* – w dolnej części okna (można włączyć/wyłączyć). Dla wybranego zadania tworzy się sesja pomodoro.  
+   - **Inteligentna rekomendacja** – na podstawie heurystyki (`ai/pomodoro_ai.py`).
+
+## Rozwijanie
+- Aby faktycznie analizować emocje z mikrofonu/kamery, rozwiń `EmotionAnalyzer`.
+- Dodaj integrację z GPT (np. generowanie raportów głosem).
+- Rozbuduj algorytmy w `PomodoroAI` (uczenie maszynowe z danymi nastroju).
+
+Miłej zabawy i pamiętaj – w razie czego minimalizm zawsze wygrywa z przesadną liczbą feature’ów! 
