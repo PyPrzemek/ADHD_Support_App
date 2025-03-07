@@ -1,0 +1,50 @@
+/* Podstawowe tło i czcionka */
+QWidget {
+    background-color: #f0f4f7;
+    font-family: 'Segoe UI';
+    font-size: 12pt;
+}
+
+/* Przyciski */
+QPushButton {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton:disabled {
+    background-color: #cccccc;
+}
+
+/* Tabela zadań / nastrojów */
+QTableWidget {
+    background-color: #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    gridline-color: #c0c0c0;
+}
+
+QHeaderView::section {
+    background-color: #e0e0e0;
+    padding: 4px;
+    border: 1px solid #c0c0c0;
+}
+
+/* ComboBox */
+QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+}
+
+/* QCalendarWidget */
+QCalendarWidget {
+    border: 1px solid #c0c0c0;
+    background: #ffffff;
+}
